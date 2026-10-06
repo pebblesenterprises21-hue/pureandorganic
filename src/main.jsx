@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Link, Route, Routes, useLocation, useNavigate, useParams } from 'react-router-dom';
+import { HashRouter, Link, Route, Routes, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { Search, ShoppingBag, UserRound, Menu, X, ChevronRight, ArrowRight, Leaf, ShieldCheck, Truck, Heart, Minus, Plus, Trash2, CheckCircle2 } from 'lucide-react';
 import './styles.css';
 import { categories, products, getProduct } from './lib/products';
@@ -61,4 +61,4 @@ function About(){return <main className="about"><section className="about-hero">
 function NotFound(){return <main className="empty"><h1>Product not found</h1><Link className="btn dark" to="/shop">Back to shop</Link></main>}
 function Footer(){return <footer><div className="footer-main"><div><Link className="brand footer-brand" to="/"><span className="brand-mark"><Leaf size={20}/></span><span>pure<span>&</span>organic</span></Link><p>Thoughtful products for a cleaner, kinder everyday life.</p></div><div><h4>Shop</h4><Link to="/shop">All products</Link><Link to="/category/wellness">Wellness</Link><Link to="/category/bodycare">Body Care</Link><Link to="/category/home">Eco Home</Link></div><div><h4>About</h4><Link to="/about">Our story</Link><a href="#">Contact</a><a href="#">Shipping</a><a href="#">Returns</a></div><div><h4>Stay connected</h4><p>Follow our journey toward simpler, more conscious living.</p></div></div><div className="footer-bottom"><span>© 2026 Pure & Organic</span><span>Made with intention in India</span></div></footer>}
 
-createRoot(document.getElementById('root')).render(<BrowserRouter><App/></BrowserRouter>);
+createRoot(document.getElementById('root')).render(<HashRouter><App/></HashRouter>);
